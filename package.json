@@ -1,0 +1,55 @@
+{
+  "name": "add-dot",
+  "displayName": "傍点",
+  "publisher": "kaorin",
+  "description": "指定した範囲に傍点を追加する",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.addDot",
+    "onCommand:extension.addRuby"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.addDot",
+        "title": "傍点"
+      },
+      {
+        "command": "extension.addRuby",
+        "title": "ルビ"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.addDot",
+        "key": "ctrl+shift+/",
+        "mac": "cmd+shift+/"
+      },
+      {
+        "command": "extension.addRuby",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.40.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "vscode-test": "^1.2.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
