@@ -28,16 +28,23 @@ export function activate(context: vscode.ExtensionContext) {
 			/**
 			 * ここでテキストを加工します。
 			 **/
-			let textArray = Array.from(text);
 			let convText = '';
-			textArray.forEach((val) =>{
-				convText += "｜"+val+"《・》";
-			});
-			
-			//エディタ選択範囲にテキストを反映
-			editor.edit(edit => {
-				edit.replace(cur_selection, convText);
-			});	
+			if(text.match(/｜/) !==  null){
+				convText = text.replace(/[｜《・》]/g,'');
+				//エディタ選択範囲にテキストを反映
+				editor.edit(edit => {
+					edit.replace(cur_selection, convText);
+				});	
+			}else{
+				let textArray = Array.from(text);
+				textArray.forEach((val) =>{
+					convText += "｜" + val + "《・》";
+				});
+				//エディタ選択範囲にテキストを反映
+				editor.edit(edit => {
+					edit.replace(cur_selection, convText);
+				});	
+			}
 		}
 	});
 	let cmd2 = vscode.commands.registerCommand('extension.addRuby', () => {
