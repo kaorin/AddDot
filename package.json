@@ -3,7 +3,7 @@
   "displayName": "傍点",
   "publisher": "kaorin",
   "description": "指定した範囲に傍点を追加する",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.40.0"
   },
@@ -30,13 +30,13 @@
     "keybindings": [
       {
         "command": "extension.addDot",
-        "key": "ctrl+shift+/",
-        "mac": "cmd+shift+/"
+        "key": "alt+d",
+        "mac": "cmd+d"
       },
       {
         "command": "extension.addRuby",
-        "key": "ctrl+shift+r",
-        "mac": "cmd+shift+r"
+        "key": "alt+r",
+        "mac": "cmd+r"
       }
     ]
   },
