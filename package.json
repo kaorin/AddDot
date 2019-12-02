@@ -10,6 +10,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/AddDot.png",
   "activationEvents": [
     "onCommand:extension.addDot",
     "onCommand:extension.addRuby"
