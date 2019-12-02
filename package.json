@@ -3,7 +3,7 @@
   "displayName": "傍点",
   "publisher": "kaorin",
   "description": "指定した範囲に傍点を追加する",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.40.0"
   },
